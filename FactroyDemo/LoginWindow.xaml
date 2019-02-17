@@ -1,0 +1,65 @@
+﻿<Window x:Name="loginWindow" x:Class="FactroyDemo.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FactroyDemo"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"    
+        mc:Ignorable="d"
+        FontSize="50"
+        xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+        Title="登录" Height="450" Width="600" ResizeMode="NoResize"
+        Icon="logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center"
+        WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" Loaded="Login_Load" 
+        >
+    <Window.Background>
+        <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/3.jpg" TileMode="FlipX"/>
+    </Window.Background>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2" Margin="0,0,-0.4,0">
+            <Grid.RowDefinitions>
+
+
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txt_UserName" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" materialDesign:HintAssist.Hint="请输入账号" 
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="18" ></TextBox>
+            <PasswordBox
+                    x:Name="Txt_Password" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+                    materialDesign:HintAssist.Hint="请输入密码"  Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontSize="18" />
+
+            <Button  Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Name="btnLogin"
+                     Height="50"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    materialDesign:ButtonProgressAssist.Value="-1"
+    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+    Content="登录" FontSize="18" Click="Clike_Login"
+    />
+         
+
+
+
+
+        </Grid>
+
+
+    </Grid>
+</Window>

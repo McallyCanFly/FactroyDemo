@@ -1,0 +1,89 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"      
+      
+        x:Class="FactroyDemo.MainWindow"
+        Title="主界面" Height="800" Width="1100"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Icon="logo.ico" WindowState="Maximized">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- data template used for the dialogs example, defines a View for a ViewModel of type DateTime  -->
+            <DataTemplate DataType="{x:Type system:DateTime}">
+                <StackPanel Margin="16">
+                    <TextBlock><Run Text="England win the World Cup:"/></TextBlock>
+                    <TextBlock Margin="0 8 0 0" Text="{Binding ''}" />
+                    <TextBlock Margin="0 8 0 0" ><Run Text="You will never see that again."/></TextBlock>
+                    <Button  Margin="0 8 0 0" IsDefault="True" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{DynamicResource MaterialDesignFlatButton}" Content="AWESOME"/>
+                </StackPanel>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.FontFamily>
+        <StaticResource ResourceKey="MaterialDesignFont"/>
+    </Window.FontFamily>
+    <Window.CommandBindings>
+        <CommandBinding Command="Copy" Executed="OnCopy"/>
+    </Window.CommandBindings>
+
+    <materialDesign:DialogHost Identifier="RootDialog" SnackbarMessageQueue="{Binding MessageQueue, ElementName=MainSnackbar}">
+        <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding IsChecked, ElementName=MenuToggleButton}">
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <DockPanel MinWidth="212">
+                    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
+                                    DockPanel.Dock="Top"
+                                    HorizontalAlignment="Right" Margin="16"
+                                    IsChecked="{Binding IsChecked, ElementName=MenuToggleButton, Mode=TwoWay}" />
+                    <ListBox x:Name="DemoItemsListBox"  SelectedIndex="0"      
+                             FontSize="30"
+                            
+                             PreviewMouseLeftButtonUp="UIElement_OnPreviewMouseLeftButtonUp">
+                       
+                    </ListBox>
+                </DockPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+            <DockPanel>
+                <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                            Mode="PrimaryMid" DockPanel.Dock="Top">
+                    <DockPanel>
+                        <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
+                                        x:Name="MenuToggleButton"/>
+                  
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"><Run Text="财务功能软件"/></TextBlock>
+                    </DockPanel>
+                </materialDesign:ColorZone>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                
+                    <ScrollViewer Grid.Row="1"  Name="ScroView"
+                                  HorizontalScrollBarVisibility="{Binding SelectedItem.HorizontalScrollBarVisibilityRequirement, ElementName=DemoItemsListBox}"
+                                  VerticalScrollBarVisibility="{Binding SelectedItem.VerticalScrollBarVisibilityRequirement, ElementName=DemoItemsListBox}" 
+                                  Padding="{Binding SelectedItem.MarginRequirement, ElementName=DemoItemsListBox}">
+                        <ContentControl  Name="Cotent"  Content="{Binding SelectedItem.Content, ElementName=DemoItemsListBox}" />
+                    </ScrollViewer>
+
+                    
+                </Grid>
+
+            </DockPanel>
+        </materialDesign:DrawerHost>
+    </materialDesign:DialogHost>
+</Window>

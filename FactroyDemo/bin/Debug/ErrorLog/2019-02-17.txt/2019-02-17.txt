@@ -1,0 +1,6 @@
+错误发生时间为:2019/2/17 12:15:17
+错误类型:模拟异常
+具体错误:
+System.Exception: 模拟异常
+   在 Utillib.Super`1.ToEntity(DataTable dr) 位置 E:\vswork\FactroyDemo\Utillib\Super.cs:行号 27
+=============================================================================
