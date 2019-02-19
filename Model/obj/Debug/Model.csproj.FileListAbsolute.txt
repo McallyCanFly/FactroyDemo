@@ -16,3 +16,12 @@ C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Model\obj\Debug\Model.csproj.CoreC
 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Model\obj\Debug\Model.dll
 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Model\obj\Debug\Model.pdb
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Model\bin\Debug\Model.dll
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Model\bin\Debug\Model.pdb
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Model\bin\Debug\Utillib.dll
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Model\bin\Debug\Utillib.pdb
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Model\obj\Debug\Model.dll
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Model\obj\Debug\Model.pdb

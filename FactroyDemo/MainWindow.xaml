@@ -49,10 +49,9 @@
                                     DockPanel.Dock="Top"
                                     HorizontalAlignment="Right" Margin="16"
                                     IsChecked="{Binding IsChecked, ElementName=MenuToggleButton, Mode=TwoWay}" />
-                    <ListBox x:Name="DemoItemsListBox"  SelectedIndex="0"      
+                    <ListBox x:Name="DemoItemsListBox"     
                              FontSize="30"
-                            
-                             PreviewMouseLeftButtonUp="UIElement_OnPreviewMouseLeftButtonUp">
+                             PreviewMouseLeftButtonUp="UIElement_OnPreviewMouseLeftButtonUp" SelectionChanged="ListBox_selectClike">
                        
                     </ListBox>
                 </DockPanel>

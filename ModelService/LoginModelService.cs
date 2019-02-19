@@ -11,7 +11,7 @@ using winDemo;
 
 namespace ModelService
 {
-    public class LoginService : Super<Login>
+    public class LoginModelService : Super<Login>
     {
         public static Login GetUser(Login login)
         {

@@ -1,0 +1,17 @@
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\Service.dll
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\Service.pdb
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\Model.dll
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\ModelService.dll
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\Utillib.dll
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\System.Data.SQLite.dll
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\ModelService.pdb
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\ModelService.dll.config
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\Model.pdb
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\Utillib.pdb
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\System.Data.SQLite.xml
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\obj\Debug\Service.csprojAssemblyReference.cache
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\obj\Debug\Service.csproj.CopyComplete
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\obj\Debug\Service.dll
+C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Service\obj\Debug\Service.pdb

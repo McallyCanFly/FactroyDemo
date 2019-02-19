@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelService", "ModelServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utillib", "Utillib\Utillib.csproj", "{DA487FC9-3523-4E57-9023-3B50B31EDAEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{767C8403-784B-4403-8D33-4F63372618EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DA487FC9-3523-4E57-9023-3B50B31EDAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA487FC9-3523-4E57-9023-3B50B31EDAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA487FC9-3523-4E57-9023-3B50B31EDAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{767C8403-784B-4403-8D33-4F63372618EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{767C8403-784B-4403-8D33-4F63372618EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{767C8403-784B-4403-8D33-4F63372618EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{767C8403-784B-4403-8D33-4F63372618EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

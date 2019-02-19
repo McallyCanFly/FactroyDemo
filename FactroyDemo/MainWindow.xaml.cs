@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-
+using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 
 using System.Windows.Input;
@@ -69,6 +69,16 @@ namespace FactroyDemo
                     Trace.WriteLine(ex.ToString());
                 }
             }
+        }
+
+        private void ListBox_selectClike(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            // MessageBox.Show(DemoItemsListBox.SelectedValue.ToString());
+          
+          UserControl u=  new UserControl1(DemoItemsListBox.SelectedValue.ToString()+"  "+ ((ListBox)sender).SelectedIndex);
+            //u.Name = ;
+
+            this.Cotent.Content = u;
         }
     }
 }
