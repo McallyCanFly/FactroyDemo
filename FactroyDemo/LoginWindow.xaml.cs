@@ -41,9 +41,28 @@ namespace FactroyDemo
         private void Clike_Login(object sender, RoutedEventArgs e)
         {
 
+            //Login l = new Login()
+            //{
+            //    LoginID = GetOnlyOneID.GuidToLongID("AC"),
+            //    Account = "adminy",
+            //    PassWord = Encryption.SHA512Encrypt("123465"),
+            //    UserName = "Mcally",
+            //    Sex = 0,
+            //    Address = "广州东莞市寮步镇",
+            //    Status = "10000000",
+
+
+            //};
+            //bool f = LoginService.Insert(l);
+            //if (f)
+            //{
+
+            //}
+
+
             if (Check.IsEmpty(txt_UserName.Text.Trim()))
             {
-               
+
                 MyCustomControlLibrary.MMessageBox.Reault reault = MyCustomControlLibrary.MMessageBox.ShouBox(
                                      "账号不能为空！",
                                      "提示",
@@ -66,11 +85,12 @@ namespace FactroyDemo
             }
             Login login = new Login()
             {
-                UserName = txt_UserName.Text.Trim(),
-                PassWord = Txt_Password.Password.Trim()
+                Account = txt_UserName.Text.Trim(),
+                PassWord = Encryption.SHA512Encrypt(Txt_Password.Password.Trim()),
+                Status= "10000000"
 
             };
-
+           
             Login lg = LoginService.GetUser(login);
             if (lg == null)
             {

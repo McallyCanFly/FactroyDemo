@@ -1,0 +1,60 @@
+错误发生时间为:2019/2/21 22:54:24
+错误类型:Only SQLite Version 3 is supported at this time
+具体错误:
+System.NotSupportedException: Only SQLite Version 3 is supported at this time
+   在 System.Data.SQLite.SQLiteConnection.Open()
+   在 winDemo.SQLiteHelper.ExecuteNonQuery(String sql, CommandType type, SQLiteParameter[] paramList) 位置 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\ModelService\SQLiteHelper.cs:行号 248
+=============================================================================错误发生时间为:2019/2/21 22:55:27
+错误类型:Only SQLite Version 3 is supported at this time
+具体错误:
+System.NotSupportedException: Only SQLite Version 3 is supported at this time
+   在 System.Data.SQLite.SQLiteConnection.Open()
+   在 winDemo.SQLiteHelper.ExecuteNonQuery(String sql, CommandType type, SQLiteParameter[] paramList) 位置 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\ModelService\SQLiteHelper.cs:行号 248
+=============================================================================错误发生时间为:2019/2/21 22:56:36
+错误类型:Only SQLite Version 3 is supported at this time
+具体错误:
+System.NotSupportedException: Only SQLite Version 3 is supported at this time
+   在 System.Data.SQLite.SQLiteConnection.Open()
+   在 winDemo.SQLiteHelper.ExecuteNonQuery(String sql, CommandType type, SQLiteParameter[] paramList) 位置 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\ModelService\SQLiteHelper.cs:行号 248
+=============================================================================错误发生时间为:2019/2/21 22:59:24
+错误类型:SQL logic error
+table Login has no column named LoginID
+具体错误:
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table Login has no column named LoginID
+   在 System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   在 System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   在 System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   在 System.Data.SQLite.SQLiteDataReader.NextResult()
+   在 System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   在 System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   在 System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   在 winDemo.SQLiteHelper.ExecuteNonQuery(String sql, CommandType type, SQLiteParameter[] paramList) 位置 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\ModelService\SQLiteHelper.cs:行号 249
+=============================================================================错误发生时间为:2019/2/21 23:10:25
+错误类型:类型“System.DBNull”的对象无法转换为类型“System.String”。
+具体错误:
+System.ArgumentException: 类型“System.DBNull”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 System.Reflection.PropertyInfo.SetValue(Object obj, Object value)
+   在 Utillib.Super`1.ToEntity(DataTable dt) 位置 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Utillib\Super.cs:行号 48
+=============================================================================错误发生时间为:2019/2/21 23:28:42
+错误类型:类型“System.DBNull”的对象无法转换为类型“System.String”。
+具体错误:
+System.ArgumentException: 类型“System.DBNull”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 System.Reflection.PropertyInfo.SetValue(Object obj, Object value)
+   在 Utillib.Super`1.ToEntity(DataTable dt) 位置 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Utillib\Super.cs:行号 48
+=============================================================================

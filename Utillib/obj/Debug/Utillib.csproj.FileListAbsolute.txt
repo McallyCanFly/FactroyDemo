@@ -5,7 +5,6 @@ E:\vswork\FactroyDemo\Utillib\obj\Debug\Utillib.dll
 E:\vswork\FactroyDemo\Utillib\obj\Debug\Utillib.pdb
 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Utillib\bin\Debug\Utillib.dll
 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Utillib\bin\Debug\Utillib.pdb
-C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Utillib\obj\Debug\Utillib.csprojAssemblyReference.cache
 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Utillib\obj\Debug\Utillib.csproj.CoreCompileInputs.cache
 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Utillib\obj\Debug\Utillib.dll
 C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Utillib\obj\Debug\Utillib.pdb
@@ -14,3 +13,4 @@ C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Utillib\bin\Debug\Utillib.pdb
 C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Utillib\obj\Debug\Utillib.csproj.CoreCompileInputs.cache
 C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Utillib\obj\Debug\Utillib.dll
 C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\Utillib\obj\Debug\Utillib.pdb
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\Utillib\obj\Debug\Utillib.csprojAssemblyReference.cache

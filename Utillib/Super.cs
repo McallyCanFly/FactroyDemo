@@ -42,6 +42,8 @@ namespace Utillib
                                 if (row[column.ColumnName].GetType().ToString() == "System.Int32")
                                 {
                                     pro.SetValue(entity, int.Parse(row[column.ColumnName].ToString()));
+                                } else if (row[column.ColumnName].GetType().ToString() == "System.DBNull") {
+                                    pro.SetValue(entity, null);
                                 }
                                 else
                                 {

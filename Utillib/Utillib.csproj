@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Check.cs" />
+    <Compile Include="Encryption.cs" />
+    <Compile Include="GetOnlyOneID.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Super.cs" />

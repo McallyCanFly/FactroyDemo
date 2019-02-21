@@ -178,9 +178,6 @@
     <None Include="Resources\Pass.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lgbg.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
+using Utillib;
 
 namespace winDemo
 {
@@ -231,20 +232,26 @@ namespace winDemo
         /// <param name="type"></param>
         /// <param name="paramList"></param>
         /// <returns></returns>
-        public static int ExecuteNonQuery(string sql, CommandType type = CommandType.Text, params object[] paramList)
+        public static int ExecuteNonQuery(string sql, CommandType type,  SQLiteParameter[] paramList)
         {
             int result = 0;
-            using (SQLiteConnection cn = new SQLiteConnection(connectionString))
+            try
             {
-                using (SQLiteCommand cmd = new SQLiteCommand(sql, cn))
+                using (SQLiteConnection cn = new SQLiteConnection(connectionString))
                 {
-                    cmd.CommandType = type;
-                    if (paramList != null && paramList.Count() > 0)
-                        cmd.Parameters.AddRange(paramList);
-                    if (cn.State == ConnectionState.Closed)
-                        cn.Open();
-                    result = cmd.ExecuteNonQuery();
+                    using (SQLiteCommand cmd = new SQLiteCommand(sql, cn))
+                    {
+                        cmd.CommandType = type;
+                        if (paramList != null && paramList.Count() > 0)
+                            cmd.Parameters.AddRange(paramList);
+                        if (cn.State == ConnectionState.Closed)
+                            cn.Open();
+                        result = cmd.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch (Exception ex) {
+                Log.WriteLog(ex);
             }
             return result;
 

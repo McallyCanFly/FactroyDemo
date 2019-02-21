@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,12 +26,51 @@ namespace FactroyDemo
         {
             
             InitializeComponent();
-            this.TxtContent.Text = Name;
+           this.dataGrid1.ItemsSource = GetAccountData();
         }
 
         private void UserControl_Load(object sender, RoutedEventArgs e)
         {
            
         }
+
+
+        public List<Account> GetAccountData() {
+            return new List<Account>() {
+
+                           new Account(){UserName="Mcally",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Loee",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Tom",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Mcally",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Jack",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Tim",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Mcally",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Mcally",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Mcally",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Jack",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Tim",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Mcally",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+                           new Account(){UserName="Mcally",Password="Mcally",CreateTime="2019-02-20",Midfly="" },
+
+
+
+
+
+            };
+
+
+
+
+        }
+
     }
+
+
+
+
+    /// <summary>
+    /// MainWindow.xaml 的交互逻辑
+    /// </summary>
+    public enum Sex { 男, 女 };  //注意 写在命名空间内 ，不要写在类里，否则台前local:Sex找不到路径
+
 }

@@ -119,3 +119,11 @@ C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\FactroyDemo\obj\Debug\UserControl1.bam
 C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\FactroyDemo\obj\Debug\window\LoadingDialog.g.cs
 C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\FactroyDemo\obj\Debug\window\LoadingDialog.baml
 C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\FactroyDemo\bin\Debug\XamlAnimatedGif.dll
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\bin\Debug\Service.dll
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\bin\Debug\XamlAnimatedGif.dll
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\bin\Debug\Service.pdb
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\obj\Debug\UserControl1.g.cs
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\obj\Debug\window\LoadingDialog.g.cs
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\obj\Debug\UserControl1.baml
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\obj\Debug\window\LoadingDialog.baml
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\obj\Debug\GeneratedInternalTypeHelper.g.cs

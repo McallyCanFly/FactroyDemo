@@ -47,7 +47,7 @@ namespace FactroyDemo.Properties {
         }
         
         /// <summary>
-        ///   重写当前线程的 CurrentUICulture 属性
+        ///   使用此强类型资源类，为所有资源查找
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -66,16 +66,6 @@ namespace FactroyDemo.Properties {
         internal static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("_3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap lgbg {
-            get {
-                object obj = ResourceManager.GetObject("lgbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

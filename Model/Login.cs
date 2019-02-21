@@ -16,6 +16,11 @@ namespace Model
         public string CreateTime { set; get; }
         public string ModifyTime { set; get; }
         public string Status { set; get; }
+        public string Account { set; get; }
+        public string EmpNo { set; get; }
+        public string Address { set; get; }
+        public int Sex { set; get; }
+        public string LoginID { set; get; }
 
 
     }

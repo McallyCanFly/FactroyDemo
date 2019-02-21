@@ -1,0 +1,13 @@
+CREATE TABLE "Login" (
+  "ID" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+  "UserName" TEXT(8) NOT NULL,
+  "PassWord" TEXT(300) NOT NULL,
+  "CreateTime" text(30) NOT NULL,
+  "ModifyTime" TEXT(30),
+  "Status" TEXT(30) NOT NULL,
+  "LoginID" text(300) NOT NULL,
+  "Sex" int(2) NOT NULL,
+  "Address" TEXT(50),
+  "EmpNo" int(50),
+  "Account" TEXT(20) NOT NULL
+);

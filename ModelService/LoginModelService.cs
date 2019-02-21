@@ -13,13 +13,21 @@ namespace ModelService
 {
     public class LoginModelService : Super<Login>
     {
+
+        /// <summary>
+        /// 验证用户是否存在
+        /// Mcally 2019年2月21日22:17:35
+        /// </summary>
+        /// <param name="login"></param>
+        /// <returns></returns>
         public static Login GetUser(Login login)
         {
-            string sql = @"SELECT  *  FROM   Login  WHERE  UserName=@UserName  and PassWord=@PassWord ";
+            string sql = @"SELECT  *  FROM   Login  WHERE  Account=@Account  and PassWord=@PassWord  and  Status=@Status";
 
             List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
-            sQLites.Add(new SQLiteParameter("@UserName", login.UserName));
+            sQLites.Add(new SQLiteParameter("@Account", login.Account));
             sQLites.Add(new SQLiteParameter("@PassWord", login.PassWord));
+            sQLites.Add(new SQLiteParameter("@Status", login.Status));
             DataTable dt = SQLiteHelper.ExecuteDataTable(sql, sQLites.ToArray());
             if (dt.Rows.Count == 0)
                 return null;
@@ -28,6 +36,37 @@ namespace ModelService
 
 
         }
+        /// <summary>
+        /// 新增用户
+        /// Mcally  2019年2月21日22:16:24
+        /// </summary>
+        /// <param name="login"></param>
+        /// <returns></returns>
+        public static bool Insert(Login login)
+        {
+            string sql = $@" INSERT  INTO Login(LoginID,EmpNo,Account,PassWord,UserName,Sex,Address,CreateTime,ModifyTime,Status) 
+                             VALUES(
+                             @LoginID,@EmpNo,@Account,@PassWord,@UserName,@Sex,@Address,
+                             '{DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss")}',@ModifyTime,@Status
+                                   )";
+
+            List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
+            sQLites.Add(new SQLiteParameter("@LoginID", login.LoginID));
+            sQLites.Add(new SQLiteParameter("@EmpNo", login.EmpNo));
+            sQLites.Add(new SQLiteParameter("@Account", login.Account));
+            sQLites.Add(new SQLiteParameter("@PassWord", login.PassWord));
+            sQLites.Add(new SQLiteParameter("@UserName", login.UserName));
+            sQLites.Add(new SQLiteParameter("@Sex", login.Sex));
+            sQLites.Add(new SQLiteParameter("@Address", login.Address));
+            sQLites.Add(new SQLiteParameter("@ModifyTime", login.ModifyTime));
+            sQLites.Add(new SQLiteParameter("@Status", login.Status));
+            return SQLiteHelper.ExecuteNonQuery(sql, CommandType.Text, sQLites.ToArray()) > 0;
+
+        }
+
+
+
+
 
         public void get()
         {

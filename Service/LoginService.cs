@@ -19,5 +19,13 @@ namespace Service
 
         }
 
+
+        public static bool  Insert(Login login)
+        {
+
+            return LoginModelService.Insert(login);
+
+        }
+
     }
 }
