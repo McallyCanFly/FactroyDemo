@@ -1,0 +1,29 @@
+﻿<!--
+    1.此种是wpfanimatedgif的引用Gif 动图方式
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        <Image  gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/Resources/love.gif"/>
+         或者 <Image  gif:ImageBehavior.AnimatedSource="Images/love.gif"/>
+    2. 1.此种是XamlAnimatedGif的引用Gif 动图方式
+         xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+     <Image  gif:AnimationBehavior.SourceUri="/Images/love.gif"  />
+
+     
+-->
+
+
+
+<UserControl x:Class="FactroyDemo.GifUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FactroyDemo"
+             mc:Ignorable="d" 
+             xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <Image  gif:AnimationBehavior.SourceUri="/Images/love.gif"  />
+
+    </Grid>
+</UserControl>

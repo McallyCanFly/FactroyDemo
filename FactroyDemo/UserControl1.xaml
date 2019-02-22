@@ -44,7 +44,6 @@
                     </DataGridTemplateColumn>
                     <DataGridTextColumn Header="公司名称"  Width="2*" Binding="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                     <DataGridTextColumn Header="姓名"   Width="2*" Binding="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-
                     <DataGridTemplateColumn Header="性别" Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -64,7 +63,7 @@
                     <DataGridTextColumn Header="职务"  Binding="{Binding CreateTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <StackPanel  Grid.Row="2" Orientation="Horizontal"  VerticalAlignment="Bottom"  >
+            <StackPanel  Margin="0 0 0 10" Grid.Row="2" Orientation="Horizontal"  VerticalAlignment="Bottom"  >
                 <TextBlock Text="转到" Margin="8" VerticalAlignment="Center"/>
                 <Border  HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox Name="tbxPageNum" Text="" VerticalAlignment="Center" Width="30" TextAlignment="Center"/>
@@ -72,9 +71,9 @@
                 </Border>
 
                 <TextBlock Text="页" VerticalAlignment="Center" Margin="8" />
-                <Button Content="GO" VerticalContentAlignment="Center" Background="#FF636265" Margin="8"/>
-                <Button Name="btnUp"  Margin="8" Content="上一页"  VerticalAlignment="Center" Background="#FF6D6D6E" />
-                <Button Name="btnNext" Margin="8" Content="下一页"  VerticalAlignment="Center" Background="#FF7B7A7D"/>
+                <Button Content="GO" VerticalContentAlignment="Center" Background="#FF636265" Margin="8" BorderBrush="Transparent"/>
+                <Button Name="btnUp"  Margin="8" Content="上一页"  VerticalAlignment="Center" Background="#FF6D6D6E"   BorderBrush="Transparent"/>
+                <Button Name="btnNext" Margin="8" Content="下一页"  VerticalAlignment="Center" Background="#FF7B7A7D"  BorderBrush="Transparent"/>
                 <TextBlock Height="20">
              <TextBlock Text="【共" />
              <TextBlock Name="tbkTotal" Foreground="Red" />

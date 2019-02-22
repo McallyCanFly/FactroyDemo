@@ -74,9 +74,11 @@ namespace FactroyDemo
         private void ListBox_selectClike(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             // MessageBox.Show(DemoItemsListBox.SelectedValue.ToString());
-          
-          UserControl u=  new UserControl1(DemoItemsListBox.SelectedValue.ToString()+"  "+ ((ListBox)sender).SelectedIndex);
+
+            // UserControl u=  new UserControl1(DemoItemsListBox.SelectedValue.ToString()+"  "+ ((ListBox)sender).SelectedIndex);
             //u.Name = ;
+
+            GifUserControl u = new GifUserControl();
 
             this.Cotent.Content = u;
         }

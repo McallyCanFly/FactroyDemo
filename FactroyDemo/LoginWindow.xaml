@@ -11,14 +11,16 @@
         Title="登录" Height="450" Width="600" ResizeMode="NoResize"
         Icon="logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center"
         WindowStartupLocation="CenterScreen" Loaded="Login_Load" WindowStyle="None" 
-       
+        Background="Gray"
         >
-    <Window.Background>
+    <!--<<Window.Background>
+          
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/3.jpg" TileMode="FlipX"/>
-    </Window.Background>
+    </Window.Background>-->
 
     <Grid>
-     
+        <Image  gif:AnimationBehavior.SourceUri="/Images/langman.gif" Stretch="Fill"  />
+
         <Grid >
             
             <Grid.ColumnDefinitions>
@@ -67,10 +69,10 @@
                         materialDesign:ButtonProgressAssist.Value="-1"
                         materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                         materialDesign:ButtonProgressAssist.IsIndeterminate="True"
-                        Content="登录" FontSize="18" Click="Clike_Login"
+                        Content="登录" FontSize="18" Click="Clike_Login" 
                         />
-                <Button x:Name="Btn_Close"   FontWeight="Bold"  FontSize="20" VerticalAlignment="Top" Height="50"
-                      Width="50" HorizontalAlignment="Right"  Grid.Row="0" Grid.Column="3"   Content="X" Background="Transparent" BorderBrush="Transparent" Click="Btn_CoseWindow" />
+                <Button  ToolTip="退出"   x:Name="Btn_Close"   FontWeight="Bold"  FontSize="20" VerticalAlignment="Top" Height="50" 
+                      Width="50" HorizontalAlignment="Right"  Grid.Row="0" Grid.Column="3"   Content="X" Background="Transparent" BorderBrush="Transparent" Click="Btn_CoseWindow" Foreground="#DD5D5858" />
 
             </Grid>
 

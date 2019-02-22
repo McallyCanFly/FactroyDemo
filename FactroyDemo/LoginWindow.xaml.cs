@@ -41,6 +41,9 @@ namespace FactroyDemo
         private void Clike_Login(object sender, RoutedEventArgs e)
         {
 
+
+           
+
             //Login l = new Login()
             //{
             //    LoginID = GetOnlyOneID.GuidToLongID("AC"),
