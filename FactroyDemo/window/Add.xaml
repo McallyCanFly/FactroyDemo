@@ -1,0 +1,122 @@
+﻿<Window x:Class="FactroyDemo.window.Add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FactroyDemo.window"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"    
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        
+        Title="添加新用户" Height="500" Width="800" Background="#FD159038" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+
+        <Grid Margin=" 0 0 70 0" HorizontalAlignment="Center" Width="800">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Text="添加新用户" FontSize="20" FontWeight="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0"  FontSize="18" Margin="0 0 5 0"  Text="账号" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <TextBox  Grid.Row="1" Grid.Column="1"
+                      x:Name="Account"
+                      materialDesign:TransitionAssist.DisableTransitions="True" />
+
+            <TextBlock Grid.Row="2" Grid.Column="0"  FontSize="18" Margin="0 0 5 0"  Text="密码" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <PasswordBox
+                Grid.Row="2" Grid.Column="1"
+              x:Name="Password"
+              />
+
+
+            <TextBlock Grid.Row="3" Grid.Column="0"  FontSize="18" Margin="0 0 5 0"  Text="确认密码" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+
+            <PasswordBox
+                Name="surePass"
+                Grid.Row="3" Grid.Column="1"
+              Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+
+            <TextBlock Grid.Row="4" Grid.Column="0"  FontSize="18" Margin="0 0 5 0"  Text="职位" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <TextBox  Grid.Row="4" Grid.Column="1"
+                      Name="Job"
+                      materialDesign:TransitionAssist.DisableTransitions="True" />
+
+
+            <TextBlock Grid.Row="5" Grid.Column="0"  FontSize="18" Margin="0 0 5 0"  Text="工号" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <TextBox  Grid.Row="5" Grid.Column="1"
+                      Name="EmpNo"
+                      materialDesign:TransitionAssist.DisableTransitions="True" />
+
+
+
+            <TextBlock Grid.Row="1" Grid.Column="3"  FontSize="18" Margin="0 0 5 0"  Text="姓名" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <TextBox  Grid.Row="1" Grid.Column="4"
+                      Name="UserName"
+                      materialDesign:TransitionAssist.DisableTransitions="True" />
+
+            <TextBlock Grid.Row="2" Grid.Column="3"  FontSize="18" Margin="0 0 5 0"  Text="年龄" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <TextBox  Grid.Row="2" Grid.Column="4"
+                      Name="Age"
+                      materialDesign:TransitionAssist.DisableTransitions="True" />
+
+            <TextBlock Grid.Row="3" Grid.Column="3"  FontSize="18" Margin="0 0 5 0"  Text="性别" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <ComboBox  Name="SexCombox" Grid.Row="3" Grid.Column="4"  VerticalAlignment="Bottom">
+                <ComboBoxItem>女</ComboBoxItem>
+                <ComboBoxItem>男</ComboBoxItem>
+            </ComboBox>
+
+            <TextBlock Grid.Row="4" Grid.Column="3"  FontSize="18" Margin="0 0 5 0"  Text="地址" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <TextBox  Grid.Row="4" Grid.Column="4"
+                      Name="Address"
+                      materialDesign:TransitionAssist.DisableTransitions="True" />
+
+            <TextBlock Grid.Row="5" Grid.Column="3"  IsEnabled="False"  FontSize="18" Margin="0 0 5 0"  Text="创建时间" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <TextBox  Grid.Row="5" Grid.Column="4"
+                      Name="CreatTime"
+                      IsEnabled="False"
+                      materialDesign:TransitionAssist.DisableTransitions="True" />
+
+
+            <StackPanel  HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="0 0 0 10" Orientation="Horizontal" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2">
+                <Button
+                Margin="0 0 10 0"
+                Name="Sure"    
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Width="100"
+                ToolTip="确认" Click="Sure_Click">
+                    确认
+                </Button>
+
+                <Button
+                Name="Cancel"
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Width="100"
+                ToolTip="取消" Click="Cancel_Click">
+                    取消
+                </Button>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</Window>

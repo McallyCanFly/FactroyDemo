@@ -42,7 +42,9 @@ namespace Utillib
                                 if (row[column.ColumnName].GetType().ToString() == "System.Int32")
                                 {
                                     pro.SetValue(entity, int.Parse(row[column.ColumnName].ToString()));
-                                } else if (row[column.ColumnName].GetType().ToString() == "System.DBNull") {
+                                }
+                                else if (row[column.ColumnName].GetType().ToString() == "System.DBNull")
+                                {
                                     pro.SetValue(entity, null);
                                 }
                                 else
@@ -99,14 +101,18 @@ namespace Utillib
                             if (fieldName == column.ColumnName)
                             {
 
-                                //if (row[column.ColumnName].GetType().ToString() == "System.Int32")
-                                //{
-                                //    pro.SetValue(entity, int.Parse(row[column.ColumnName].ToString()));
-                                //}
-                                //else
-                                //{
+                                if (row[column.ColumnName].GetType().ToString() == "System.Int32")
+                                {
+                                    pro.SetValue(entity, int.Parse(row[column.ColumnName].ToString()));
+                                }
+                                else if (row[column.ColumnName].GetType().ToString() == "System.DBNull")
+                                {
+                                    pro.SetValue(entity, null);
+                                }
+                                else
+                                {
                                     pro.SetValue(entity, row[column.ColumnName]);
-                                //}
+                                }
 
                             }
 
@@ -125,19 +131,19 @@ namespace Utillib
 
 
         }
-       /// <summary>
-       /// Mcally 2019年2月17日13:58:05
-       /// 转换为集合类型
-       /// </summary>
-       /// <param name="dt"></param>
-       /// <returns></returns>
+        /// <summary>
+        /// Mcally 2019年2月17日13:58:05
+        /// 转换为集合类型
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
 
-        public IList<Hashtable> ToEntityListHash(DataTable dt)
+        public static  IList<Hashtable> ToEntityListHash(DataTable dt)
         {
             IList<Hashtable> hashtables = new List<Hashtable>();
             if (dt != null && dt.Rows.Count == 0)
                 return hashtables;
-           
+
             Hashtable hash = null;
             foreach (DataRow rows in dt.Rows)
             {
@@ -148,6 +154,8 @@ namespace Utillib
                 }
                 hashtables.Add(hash);
             }
+            int i = 0;
+
             return hashtables;
         }
 

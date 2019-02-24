@@ -367,9 +367,34 @@ namespace winDemo
             }
 
 
-            return (T)result;
+            return     (T)result;
 
         }
+
+        public static  int  GetCount(string sql, CommandType type = CommandType.Text, params object[] paramList)
+        {
+            object result = null;
+            using (SQLiteConnection cn = new SQLiteConnection(connectionString))
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, cn))
+                {
+                    cmd.CommandType = type;
+                    if (cn.State == ConnectionState.Closed)
+                        cn.Open();
+                    if (paramList != null && paramList.Count() > 0)
+                        cmd.Parameters.AddRange(paramList);
+
+                    result = cmd.ExecuteScalar();
+                }
+
+            }
+
+
+            return  result==null? 0:int.Parse(Convert.ToString(result));
+
+        }
+
+
 
         public static object ExecuteScalar(string commandText)
 

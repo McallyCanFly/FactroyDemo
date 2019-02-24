@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:FactroyDemo"
              StartupUri="LoginWindow.xaml">
     <Application.Resources>
+        
         <ResourceDictionary>
 
             <ResourceDictionary.MergedDictionaries>
@@ -40,4 +41,7 @@
 
         </ResourceDictionary>
     </Application.Resources>
+    
+    
+    
 </Application>

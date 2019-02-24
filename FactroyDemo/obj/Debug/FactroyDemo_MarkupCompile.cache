@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\FactroyDemo\obj\Debug\
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\obj\Debug\
 FactroyDemo
 none
 false
 DEBUG;TRACE
-C:\Users\MonkeyFly\Desktop\C#\FactroyDemo\FactroyDemo\App.xaml
-5-1846183258
+C:\Users\Mcally\Desktop\C#\WPFWin\FactroyDemo\FactroyDemo\App.xaml
+9-1202760899
 
-101783179063
-281102115679
-GifUserControl.xaml;LoginWindow.xaml;MainWindow.xaml;UserControl1.xaml;window\LoadingDialog.xaml;
+141633715967
+281224639585
+GifUserControl.xaml;LoginWindow.xaml;MainWindow.xaml;UserControl1.xaml;window\Add.xaml;window\CustomTableUserControl.xaml;window\Edite.xaml;window\LoadingDialog.xaml;window\TableUserControl.xaml;
 
 False
 

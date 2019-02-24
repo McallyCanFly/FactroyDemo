@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/langman.gif")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/one.gif")]
 
 

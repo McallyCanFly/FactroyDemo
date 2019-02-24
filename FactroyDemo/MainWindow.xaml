@@ -62,8 +62,17 @@
                     <DockPanel>
                         <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
                                         x:Name="MenuToggleButton"/>
-                  
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"><Run Text="财务功能软件"/></TextBlock>
+                        <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
+                            <StackPanel>
+                                <Button Content="首页"  Name="Home" Click="Home_Click" />
+                                <Separator/>
+                                <Button Content="退出"  Name="Colse" Click="Colse_Click"/>
+                                <Separator/>
+                                <Button Content="回到登录"  Name="Login" Click="Login_Click"/>
+                                <Separator/>
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"><Run Text="财务功能性软件"/></TextBlock>
                     </DockPanel>
                 </materialDesign:ColorZone>
                 <Grid>

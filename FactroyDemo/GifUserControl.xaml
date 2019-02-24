@@ -23,7 +23,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <Image  gif:AnimationBehavior.SourceUri="/Images/love.gif"  />
+        <Image  gif:AnimationBehavior.SourceUri="/Images/one.gif" Stretch="Fill"  />
 
     </Grid>
 </UserControl>

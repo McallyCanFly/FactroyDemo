@@ -1,4 +1,5 @@
 ﻿
+using FactroyDemo.window;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,10 +25,10 @@ namespace FactroyDemo
         public MainWindow()
         {
             InitializeComponent();
-           
+
             this.DemoItemsListBox.ItemsSource = GetData();
-            
-          
+
+            this.Cotent.Content = new GifUserControl();
 
         }
 
@@ -49,11 +50,11 @@ namespace FactroyDemo
             MenuToggleButton.IsChecked = false;
         }
 
-        private  void MenuPopupButton_OnClick(object sender, RoutedEventArgs e)
+        private void MenuPopupButton_OnClick(object sender, RoutedEventArgs e)
         {
-           
 
-            
+
+
         }
 
         private void OnCopy(object sender, ExecutedRoutedEventArgs e)
@@ -75,12 +76,39 @@ namespace FactroyDemo
         {
             // MessageBox.Show(DemoItemsListBox.SelectedValue.ToString());
 
-            // UserControl u=  new UserControl1(DemoItemsListBox.SelectedValue.ToString()+"  "+ ((ListBox)sender).SelectedIndex);
+            //UserControl u=  new UserControl1(DemoItemsListBox.SelectedValue.ToString()+"  "+ ((ListBox)sender).SelectedIndex);
             //u.Name = ;
 
-            GifUserControl u = new GifUserControl();
+            // GifUserControl u = new GifUserControl();
+            TableUserControl t = new TableUserControl();
+            UserControl1 u = new UserControl1(DemoItemsListBox.SelectedValue.ToString());
 
             this.Cotent.Content = u;
+
         }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            //GifUserControl gif = new GifUserControl();
+            //this.Content = gif;
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+
+        }
+
+        private void Colse_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow window = new LoginWindow();
+            window.Show();
+            this.Close();
+        }
+
+
     }
 }

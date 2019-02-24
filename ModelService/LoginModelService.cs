@@ -1,5 +1,6 @@
 ﻿using Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
@@ -22,7 +23,7 @@ namespace ModelService
         /// <returns></returns>
         public static Login GetUser(Login login)
         {
-            string sql = @"SELECT  *  FROM   Login  WHERE  Account=@Account  and PassWord=@PassWord  and  Status=@Status";
+            string sql = @"SELECT  *  FROM   Login  WHERE  Account=@Account  and PassWord=@PassWord  and  Status=@Status  and   Status <> '10000003'";
 
             List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
             sQLites.Add(new SQLiteParameter("@Account", login.Account));
@@ -44,10 +45,10 @@ namespace ModelService
         /// <returns></returns>
         public static bool Insert(Login login)
         {
-            string sql = $@" INSERT  INTO Login(LoginID,EmpNo,Account,PassWord,UserName,Sex,Address,CreateTime,ModifyTime,Status) 
+            string sql = $@" INSERT  INTO Login(LoginID,EmpNo,Account,PassWord,UserName,Sex,Address,Age,CreateTime,ModifyTime,Status,Job) 
                              VALUES(
-                             @LoginID,@EmpNo,@Account,@PassWord,@UserName,@Sex,@Address,
-                             '{DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss")}',@ModifyTime,@Status
+                             @LoginID,@EmpNo,@Account,@PassWord,@UserName,@Sex,@Address,@Age,
+                             '{DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss")}',@ModifyTime,@Status,@Job
                                    )";
 
             List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
@@ -59,13 +60,123 @@ namespace ModelService
             sQLites.Add(new SQLiteParameter("@Sex", login.Sex));
             sQLites.Add(new SQLiteParameter("@Address", login.Address));
             sQLites.Add(new SQLiteParameter("@ModifyTime", login.ModifyTime));
+            sQLites.Add(new SQLiteParameter("@Age", login.Age));
             sQLites.Add(new SQLiteParameter("@Status", login.Status));
+            sQLites.Add(new SQLiteParameter("@Job", login.Job));
             return SQLiteHelper.ExecuteNonQuery(sql, CommandType.Text, sQLites.ToArray()) > 0;
 
         }
 
+        /// <summary>
+        /// 根据状态来获取所有的用户
+        /// Mcally 2019年2月23日20:24:13
+        /// </summary>
+        /// <param name="Status"></param>
+        /// <returns></returns>
+        public static IList<Login> getAllUser(string Status)
+        {
+
+            string sql = $@" SELECT  *  FROM   Login  WHERE  Status=@Status and  Status <> '10000003'  ";
+
+            List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
+            sQLites.Add(new SQLiteParameter("@Status", Status.Trim()));
+
+            DataTable dt = SQLiteHelper.ExecuteDataTable(sql, sQLites.ToArray());
+            if (dt.Rows.Count == 0)
+                return null;
+            return ToListEntity(dt);
 
 
+        }
+
+
+        public static IList<Hashtable> getAllUserListHsah(string Status)
+        {
+
+            string sql = $@" SELECT  *  FROM   Login  WHERE  Status=@Status and  Status <> '10000003'  ";
+
+            List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
+            sQLites.Add(new SQLiteParameter("@Status", Status.Trim()));
+
+            DataTable dt = SQLiteHelper.ExecuteDataTable(sql, sQLites.ToArray());
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return ToEntityListHash(dt);
+
+
+        }
+        public static DataTable getAllUserDataTable(int page, int rows, ref int count)
+        {
+
+            string sql = $@" SELECT                                LoginID,                                UserName,
+                                Age,
+                                CreateTime,                                ModifyTime,
+                                Address,
+                                EmpNo,
+                                Job,
+                                Account,
+                                CASE Sex WHEN 0 THEN '男' ELSE  '女' END AS  Sex,
+                                CASE Status WHEN '10000000' THEN '正常' ELSE  '作废' END AS  Status 
+                            FROM  Login 
+                            WHERE   Status <> '10000003'  
+                            ORDER BY CreateTime DESC 
+                            limit {(page - 1) * rows},{rows} ";
+
+            //List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
+            //sQLites.Add(new SQLiteParameter("@Status", Status.Trim()));
+            count = SQLiteHelper.GetCount(@" SELECT COUNT(*) FROM Login  WHERE  Status <> '10000003'  ");
+            DataTable dt = SQLiteHelper.ExecuteDataTable(sql);
+            if (dt.Rows.Count == 0)
+                return new DataTable();
+
+            return dt;
+
+
+        }
+
+        /// <summary>
+        /// 账号重复判定
+        /// Mcally 2019年2月24日20:05:03
+        /// </summary>
+        /// <param name="Status"></param>
+        /// <returns></returns>
+        public static bool CheckAccount(string Account)
+        {
+
+            string sql = $@" SELECT  *  FROM   Login
+                             WHERE  Account=@Account  and  Status <> '10000003'  ";
+
+            List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
+            sQLites.Add(new SQLiteParameter("@Account", Account.Trim()));
+
+            DataTable dt = SQLiteHelper.ExecuteDataTable(sql, sQLites.ToArray());
+            if (dt.Rows.Count == 0)
+                return false;
+
+            return true;
+
+
+        }
+
+        public static bool Delete(string LoginID, string Account, string Status)
+        {
+
+            string sql = $@" Update  Login  set Status=@Status  
+                             WHERE  Account=@Account and Status <> '10000003' ";
+
+            if (!string.IsNullOrWhiteSpace(LoginID))
+            {
+                sql += $@" and   LoginID=@LoginID  ";
+            }
+            List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
+            sQLites.Add(new SQLiteParameter("@Status", Status.Trim()));
+            sQLites.Add(new SQLiteParameter("@LoginID", LoginID.Trim()));
+            sQLites.Add(new SQLiteParameter("@Account", Account.Trim()));
+
+            return SQLiteHelper.ExecuteNonQuery(sql, CommandType.Text, sQLites.ToArray()) > 0;
+
+        }
 
 
         public void get()
