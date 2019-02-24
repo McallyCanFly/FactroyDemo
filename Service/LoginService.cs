@@ -29,6 +29,18 @@ namespace Service
             return LoginModelService.Insert(login);
 
         }
+
+        /// <summary>
+        /// 修改用户
+        /// </summary>
+        /// <param name="login"></param>
+        /// <returns></returns>
+        public static bool Update(Login login)
+        {
+         
+            return LoginModelService.Update(login);
+
+        }
         public static IList<Login> getAllUser(string Status)
         {
 

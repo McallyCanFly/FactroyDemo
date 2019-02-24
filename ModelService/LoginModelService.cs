@@ -66,7 +66,33 @@ namespace ModelService
             return SQLiteHelper.ExecuteNonQuery(sql, CommandType.Text, sQLites.ToArray()) > 0;
 
         }
+        public static bool Update(Login login)
+        {
+            string sql = $@" UPDATE   Login 
+                                      set
+                                      EmpNo=@EmpNo,
+                                      Account=@Account,
+                                      UserName=@UserName,
+                                      Sex=@Sex,
+                                      Address=@Address,
+                                      Age=@Age,
+                                      ModifyTime='{DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss")}',
+                                      Job=@Job 
+                                      WHERE  LoginID=@LoginID  ";
 
+            List<SQLiteParameter> sQLites = new List<SQLiteParameter>();
+            sQLites.Add(new SQLiteParameter("@LoginID", login.LoginID));
+            sQLites.Add(new SQLiteParameter("@EmpNo", login.EmpNo));
+            sQLites.Add(new SQLiteParameter("@Account", login.Account));
+            sQLites.Add(new SQLiteParameter("@UserName", login.UserName));
+            sQLites.Add(new SQLiteParameter("@Sex", login.Sex));
+            sQLites.Add(new SQLiteParameter("@Address", login.Address));
+            sQLites.Add(new SQLiteParameter("@ModifyTime", login.ModifyTime));
+            sQLites.Add(new SQLiteParameter("@Age", login.Age));
+            sQLites.Add(new SQLiteParameter("@Job", login.Job));
+            return SQLiteHelper.ExecuteNonQuery(sql, CommandType.Text, sQLites.ToArray()) > 0;
+
+        }
         /// <summary>
         /// 根据状态来获取所有的用户
         /// Mcally 2019年2月23日20:24:13

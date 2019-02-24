@@ -263,7 +263,14 @@ namespace FactroyDemo
             Edite edite = new Edite(row);
           
             if (edite.ShowDialog()==false) {
-
+                int total = 0;
+                //读取当前的页数
+                int page = int.Parse(this.tbkCurrentsize.Text);
+                //两种方式这种需要在xmal 文件里的DataGrid  加上ItemsSource="{Binding}"  必须加 
+                this.dataGrid1.DataContext = LoginService.getAllUserDataTable(ref total, page, rows);
+                this.tbkTotal.Text = total.ToString();
+                this.tbkCurrentsize.Text = page.ToString();
+                this.btnUp.IsEnabled = false;
             };
         }
         #endregion

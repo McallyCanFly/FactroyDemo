@@ -42,7 +42,7 @@ namespace FactroyDemo.window
                 }
                 else
                 {
-                    MyCustomControlLibrary.MMessageBox.ShowSuccessAlert("用户添加失败请稍后重试 ^_^ ");
+                    MyCustomControlLibrary.MMessageBox.ShowSuccessAlert("用户添加失败请联系管理员 ^_^ ");
 
                 }
             }
