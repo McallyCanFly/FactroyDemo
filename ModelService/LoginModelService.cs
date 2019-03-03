@@ -135,9 +135,12 @@ namespace ModelService
         public static DataTable getAllUserDataTable(int page, int rows, ref int count)
         {
 
-            string sql = $@" SELECT                                LoginID,                                UserName,
+            string sql = $@" SELECT
+                                LoginID,
+                                UserName,
                                 Age,
-                                CreateTime,                                ModifyTime,
+                                CreateTime,
+                                ModifyTime,
                                 Address,
                                 EmpNo,
                                 Job,

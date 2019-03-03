@@ -1,5 +1,6 @@
 ﻿
 using FactroyDemo.window;
+using Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,9 +33,16 @@ namespace FactroyDemo
 
         }
 
-        private List<string> GetData()
+        private List<Object> GetData()
         {
-            return new List<string>() { "用户管理", "人员列表", "作业模式", "查询列表" };
+            return new List<object>() {
+               new Items{ ImgaUrl="Images/import.png",Content="用户管理"},
+               new Items{ ImgaUrl="Images/emp.png",Content="操作管理"},
+               
+
+           };
+
+            //return new List<string>() { "用户管理", "人员列表", "作业模式", "查询列表" };
         }
 
         private void UIElement_OnPreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -81,7 +89,7 @@ namespace FactroyDemo
 
             // GifUserControl u = new GifUserControl();
             TableUserControl t = new TableUserControl();
-            UserControl1 u = new UserControl1(DemoItemsListBox.SelectedValue.ToString());
+            UserControl1 u = new UserControl1(DemoItemsListBox.SelectedValue as Items);
 
             this.Cotent.Content = u;
 

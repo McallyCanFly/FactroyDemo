@@ -36,7 +36,7 @@ namespace FactroyDemo
         /// Mcally  2019年2月24日10:14:38
         /// </summary>
         /// <param name="Name"></param>
-        public UserControl1(string Name)
+        public UserControl1(Items Items)
         {
             InitializeComponent();
             int total = 0;
@@ -52,7 +52,7 @@ namespace FactroyDemo
             //this.dataGrid1.GridLinesVisibility = DataGridGridLinesVisibility.All;
 
 
-            this.Title.Text = Name;
+            this.Title.Text = Items.Content;
         }
         #endregion
 
